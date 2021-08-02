@@ -1,0 +1,48 @@
+/* pages/login/index.wxss */
+.title{
+    color: #fff;
+    margin-top: 70rpx;
+    display: flex;
+    justify-content: center;
+  }
+.back{
+  margin-top: -65rpx;
+  margin-left: 40rpx;
+}
+
+/* 第一部分 */
+.main{
+margin-top: 150rpx;
+}
+.tel,.pw{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 0;
+  margin: 0 auto;
+}
+.tel{
+  border-bottom: 1rpx solid #ededed;
+  margin-top: 40rpx;
+}
+.tel .weui-input,.pw .weui-input{
+  width: 80%;
+}
+.dl{
+  width: 80%;
+  color: #fff;
+  background:#036eb8;
+  border-radius: 12rpx;
+  display: flex;
+  justify-content: center;
+  padding: 10rpx 0;
+  margin: 20rpx auto 14rpx;
+}
+
+.wb{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+  padding: 10rpx 40rpx;
+}

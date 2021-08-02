@@ -1,0 +1,34 @@
+/* pages/edit/edit.wxss */
+.setInfo,.setName,.setSex,.setBay{
+  width: 95%;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 12rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 36rpx;
+  margin: 20rpx auto 0;
+}
+.setInfo image{
+  width: 80rpx;
+  height: 80rpx;
+  background: #F5F7F9;
+  border-radius: 50%;
+  display: block;
+}
+.setName input{
+  width: 50%;
+  text-align: right;
+}
+.set {
+  width: 80%;
+  height: 90rpx;
+  color: #fff;
+  background: #ba0818;
+  border-radius: 12rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40rpx auto 0;
+}

@@ -1,0 +1,25 @@
+<!--pages/phone/index.wxml-->
+<view>
+    <view class="common_header">
+    <header>
+    <view  slot="back" class="back">
+        <mp-icon icon="back" color="#fff" catchtap='back' size="{{14}}" bindtap="back"></mp-icon>
+    </view>
+    <view slot="title" class="title">
+      联系我们
+    </view>
+  </header>
+</view>
+    <view class="phone_serve">
+			<text>服务热线</text>
+			<p>注册咨询/软件使用咨询等问题处理</p>
+			<p>+86 17516109735</p>
+			<button><a :href="'tel:' + 17516109735">立即拨打</a></button>
+		</view>
+		<view class="phone_email">
+			<text>我们的邮箱</text>
+			<p>补充资料、投诉与建议、变更账户信息、争议处理等问题处理</p>
+			<p>2843955779@qq.com</p>
+			<button bindtap="copyUrl">复制</button>  
+		</view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "header":"/components/header",
+    "mp-tabs": "@miniprogram-component-plus/tabs"
+  },
+  "navigationStyle": "custom"
+}

@@ -1,0 +1,48 @@
+<!--index.wxml-->
+<view class="container" style="padding-bottom:50rpx;padding-top: 150rpx;">
+  <!-- <header num="{{1}}"> 子传父
+  <view>这是插槽</view>
+  </header> -->
+  <header>
+    <view slot="search" bindtap="suo">
+      <view class='page_row'>
+          <view class="search_arr">
+            <!-- <icon class="searchcion" size='16' type='search'></icon> -->
+            <input class="sousuo" disabled placeholder="搜索" />
+        </view>
+      </view>
+    </view>
+  </header>
+  <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" style="top:{{titleHeight}}px">
+  <block wx:for="{{tabs}}" wx:key="index">
+    <view class="nav_item {{currentNav == index?'active':''}}" data-current="{{index}}" bindtap="switchNav" data-index="{{index}}">{{item.name}}</view>
+  </block>
+</scroll-view>
+  <!-- 中心 -->
+  <view class="main">
+      <view bindtap="toDetail" data-item="{{item}}" class="item" wx:for="{{list}}" wx:key="this">
+          <text class="title">{{item.title}}</text>
+          <view wx:if="{{item.imageSrc.length==1}}" class="imgbox">
+              <image mode="aspectFill" src="{{item.imageSrc[0]}}"></image>
+          </view>
+          <view wx:if="{{item.imageSrc.length>1}}" class="imgbox2">
+              <image mode="aspectFill" wx:for="{{item.imageSrc}}" wx:for-item="img" wx:key="*this" src="{{img}}"></image>
+          </view>
+          <view class="bottom">
+              <text>{{item.author}}</text>
+              <text>{{item.comment}}评论</text>
+              <text>{{item.time}}</text>
+          </view>
+      </view>
+      <view class="jiazai" wx:if="{{!loading}}">
+        <mp-loading type="circle"></mp-loading>
+      </view>
+      <view class="jiesu" wx:if="{{loading && list.length>=count}}">
+        <text>暂无更多</text>
+      </view>
+  </view>
+
+
+
+
+</view>

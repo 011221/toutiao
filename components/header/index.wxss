@@ -1,0 +1,19 @@
+/* components/header/index.wxss */
+.common_header{
+    width: 100%;
+    height: 150rpx;
+    position: fixed;
+    top:0;
+    left:0;
+    background: #036eb8;
+    z-index: 999;
+  }
+
+.common_header .back{
+    position: absolute;
+    left: 10px;
+    color: #fff;
+    height: 46px;
+    line-height: 46px;
+    font-weight: bold;
+}

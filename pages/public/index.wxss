@@ -1,0 +1,43 @@
+/* pages/public/index.wxss */
+.publish{
+   margin-top: 150rpx;
+}
+.title{
+   margin-top: 70rpx;
+   display: flex;
+   color: #fff;
+   justify-content: center;
+}
+.main {
+   width: 100%;
+   height: 100%;
+   box-sizing: border-box;
+ } 
+ .a1{
+   height: 200rpx;
+ }
+ .page__bd{
+   width: 100%;
+   box-sizing: border-box;
+   padding:0 24px;
+ }
+ .fb{
+   width: 80%;
+   height: 80rpx;
+   color: #fff;
+   background:#036eb8;
+   box-sizing: border-box;
+   border-radius: 12rpx;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 50rpx auto 0;
+ }
+
+
+
+
+
+
+
+

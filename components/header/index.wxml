@@ -1,0 +1,7 @@
+<!--components/header/index.wxml-->
+<view class="common_header">
+   <slot name="search"></slot>
+	<slot name="title"></slot>
+	<slot name="back"></slot>
+    
+</view>

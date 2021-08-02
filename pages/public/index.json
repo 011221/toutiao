@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "header":"/components/header",
+    "mp-uploader": "weui-miniprogram/uploader/uploader"
+  },
+  "navigationStyle": "custom"
+}

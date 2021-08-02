@@ -1,0 +1,119 @@
+/* pages/my/index.wxss */
+.my{
+  color: #fff;
+  margin-top: 70rpx;
+  display: flex;
+  justify-content: center;
+}
+.ba{
+  position: relative;
+}
+.ba image{
+  width: 100%;
+  height: 390rpx;
+}
+.mian{
+  margin-top: 150rpx;
+}
+/* 未登录 */
+.login {
+  width: 100%;
+  height: 390rpx;
+  position: absolute;
+  top:160rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.denglu {
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+  color: #fff;
+}
+
+.denglu text:nth-child(2) {
+  margin: 0 10rpx;
+}
+
+/* 已登录 */
+.login2 {
+  width: 100%;
+  height: 390rpx;
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.tx{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50rpx;
+  margin-top: 180rpx;
+}
+.tx_left{
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.tx_left image {
+  width: 100rpx;
+  height: 100rpx;
+  background: #fff;
+  border-radius: 50%;
+  display: block;
+  margin-right: 20rpx;
+}
+.tx_right{
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #fff;
+  border: 1rpx solid #eee;
+  padding: 10rpx;
+  border-radius: 10rpx;
+}
+  /* 第二部分 */
+  .my-two{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .my-two .a2{
+    text-align: center;
+    margin-bottom: 20rpx;
+  }
+  /* 第三部分 */
+  .my_san view{
+    width: 100%;
+    padding:30rpx 15rpx 30rpx 20rpx;
+    border: 1px solid #eee;    
+    font-size: 34rpx;
+    color: #333;
+  }
+/* 登录/退出登录 */
+.tc {
+  width: 70%;
+  height: 90rpx;
+  color:#fff ;
+  background: #036eb8;
+  border-radius: 12rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50rpx 15% 0;
+}

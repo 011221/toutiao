@@ -1,0 +1,121 @@
+/* pages/reply/reply.wxss */
+.main{
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 40rpx 40rpx 140rpx;
+}
+.building{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16rpx;
+  margin: 20rpx 0;
+}
+.building > image{
+  width: 80rpx;
+  height: 80rpx;
+  background: #F5F7F9;
+  border-radius: 50%;
+}
+.building view:nth-child(2){
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20rpx;
+}
+.building view:nth-child(2) text:nth-child(2){
+  margin: 10rpx 0;
+}
+/* 评论 */
+.pinglun > text{
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  display: block;
+  padding: 10rpx 0;
+}
+.plnone{
+  width: 100%;
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+  padding: 40rpx 0;
+}
+.plxiangqing{
+  width: 100%;
+  display: flex;
+  justify-content: baseline;
+  margin-top: 30rpx;
+}
+.plxiangqing .avatar{
+  width: 80rpx;
+  height: 80rpx;
+  background: #F5F7F9;
+  border-radius: 50%;
+}
+.neirong{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 30rpx;
+}
+.xz{
+  font-size: 32rpx;
+}
+.neirong > text:nth-child(2){
+  margin: 10rpx 0;
+}
+.huifu{
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+}
+.huifu > text:last-child{
+  margin-left: 20rpx;
+}
+
+.dz{
+  height: 45rpx;
+  display: flex;
+  align-items: center;
+  margin-left: 10rpx;
+}
+.dz image{
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 4rpx;
+}
+/* 加载/无 */
+.jz_or_wu{
+  width: 100%;
+  height: 100rpx;
+  color: #999;
+  font-size: 26rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 输入 */
+.section{
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+}
+.section textarea{
+  border-radius: 12rpx;
+  border: 1rpx solid #ededed;
+  padding: 10rpx;
+}
+.section image{
+  width: 60rpx;
+  height: 60rpx;
+}

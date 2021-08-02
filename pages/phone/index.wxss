@@ -1,0 +1,41 @@
+/* pages/phone/index.wxss */
+.title{
+    color: #fff;
+    margin-top: 70rpx;
+    display: flex;
+    justify-content: center;
+  }
+  .back{
+    margin-top: -65rpx;
+    margin-left: 40rpx;
+  }
+  .phone_serve{
+   margin: 150rpx 35rpx 0;
+   padding: 10rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .phone_email{
+    margin: 0 35rpx;
+   padding: 60rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .phone_serve text,.phone_email text{
+    color: #036eb8;
+    text-align: center;
+    padding: 20rpx;
+    font-weight: bold;
+  }
+  .phone_serve button,.phone_email button{
+    background: #036eb8;
+    margin-top: 40rpx;
+    width: 100%;
+    color: #fff;
+    padding: 20rpx 35rpx;
+    border-radius: 15rpx;
+    font-weight: normal;
+  }

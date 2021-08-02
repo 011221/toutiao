@@ -1,0 +1,30 @@
+<!--pages/reg/index.wxml-->
+<!-- 导航 -->
+<view class="common_header">
+    <header>
+    <view  slot="back" class="back">
+        <mp-icon icon="back" color="#fff" catchtap='back' size="{{14}}" bindtap="back"></mp-icon>
+    </view>
+    <view slot="title" class="title">
+      注册
+    </view>
+  </header>
+</view>
+<!-- 第一部分 -->
+<view class="main">
+  <!-- 手机号 -->
+  <view class="tel">
+    <input class="weui-input" value="{{tel}}" bindinput="teltb" placeholder="请输入手机号" maxlength="11" />
+  </view>
+  <!-- 密码 -->
+  <view class="pw">
+    <input class="weui-input" value="{{pw}}" bindinput="pwtb" password type="text" placeholder="请输入密码" maxlength="16" />
+  </view>
+  <!-- 验证码 -->
+  <view class="yanzen">
+      <input class="weui-input" value="{{yzm}}" bindinput="yanzhengma" type="text" placeholder="验证码" maxlength="6" />
+      <text class="yanzhengm" bindtap="getVerify">{{str}}</text>
+  </view>
+  <!-- 注册 -->
+  <view class="dl" bindtap="reg">注册</view>
+</view>

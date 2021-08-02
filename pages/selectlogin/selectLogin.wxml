@@ -1,0 +1,21 @@
+<!--pages/selectLogin/selectLogin.wxml-->
+<view>
+    <view class="common_header">
+    <header>
+    <view  slot="back" class="back">
+        <mp-icon icon="back" color="#fff" catchtap='back' size="{{14}}" bindtap="back"></mp-icon>
+    </view>
+    <view slot="title" class="title">
+      登录方式
+    </view>
+  </header>
+</view>
+<view class="main">
+  <view class="wxdl">
+    <text>微信登录</text>
+  </view>
+  <view class="dl_or_reg">
+    <text bindtap="toLogin">使用手机号登录/注册</text>
+  </view>
+</view>
+</view>

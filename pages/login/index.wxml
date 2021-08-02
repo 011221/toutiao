@@ -1,0 +1,30 @@
+<!--pages/login/index.wxml-->
+<view>
+  <header>
+    <view slot="back" class="back">
+      <mp-icon icon="back" color="#fff" catchtap='back' size="{{14}}" bindtap="back"></mp-icon>
+    </view>
+    <view slot="title" class="title">
+      登录
+    </view>
+  </header>
+  <!-- 第一部分 -->
+  <view class="main">
+    <view class="tel">
+      <text>账号</text>
+      <input class="weui-input" value="{{tel}}" bindinput="teltb" always-embed="" placeholder="请输入手机号" maxlength="11" />
+    </view>
+    <view class="pw">
+      <text>密码</text>
+      <input class="weui-input" value="{{pw}}" bindinput="pwtb" password="true" type="text" placeholder="请输入密码"
+        maxlength="16" />
+    </view>
+    <view class="dl" bindtap="login">登录</view>
+    <view class="wb">
+      <text bindtap="resetting">忘记密码</text>
+      <navigator url="/pages/reg/index" hover-class="navigator-hover">
+        <text>还没账号? 立即注册</text>
+      </navigator>
+    </view>
+  </view>
+</view>

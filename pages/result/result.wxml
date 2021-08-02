@@ -1,0 +1,34 @@
+<!--pages/result/result.wxml-->
+<view>
+  <view class='tit_seabox'>
+        <view class="tit_seabox_bar {{addflag?'tit_seabox_add':''}} {{searchflag?'tit_start_search':''}}">
+            <icon type='search' size="32rpx"></icon>
+            <input type="text" bindinput="searchList" bindconfirm="endsearchList" bindfocus='getfocus' confirm-type='search' value='{{searchstr}}' placeholder='请输入...' />
+            <icon bindtap='activity_clear' wx:if="{{searchflag}}" type='clear' size="28rpx"></icon>
+        </view>
+        <view wx:if="{{searchflag}}" bindtap='toSearch' class="activity_seabtn">搜索</view>
+    </view>
+  <view class="main">
+        <view bindtap="toDetail" data-item="{{item}}" class="item" wx:for="{{searchList}}" wx:key="*this">
+            <text class="title">{{item.title}}</text>
+            <view wx:if="{{item.imageSrc.length==1}}" class="imgbox">
+                <image mode="aspectFill" src="{{item.imageSrc[0]}}"></image>
+            </view>
+            <view wx:if="{{item.imageSrc.length>1}}" class="imgbox2">
+                <image mode="aspectFill" wx:for="{{item.imageSrc}}" wx:for-item="img" wx:key="*this" src="{{img}}"></image>
+            </view>
+            <view class="bottom">
+                <text>{{item.author}}</text>
+                <text>{{item.comment}}评论</text>
+                <text>{{item.time}}</text>
+            </view>
+        </view>
+        <view class="jiazai" wx:if="{{!loading}}">
+          加载中...
+        </view>
+        <view class="jiesu" wx:if="{{loading && finished}}">
+          <text>暂无更多</text>
+        </view>
+    </view>
+</view>
+

@@ -1,0 +1,51 @@
+<!--pages/reply/reply.wxml-->
+<view class="main">
+  <!-- 楼主 -->
+  <view class="building">
+    <image src="{{building.info.avatar || '/images/tou.png'}}"></image>
+    <view>
+      <text class="title">{{building.info.nickname||building.info.username}}</text>
+      <text>{{building.content}}</text>
+      <text class="xz">{{building.create_time}}</text>
+    </view>
+    <!-- 点赞 -->
+    <view class="dz" bindtap="pldz" data-item="{{building}}" data-index="{{index}}">
+          <image src="{{ building.is_like ? '/images/dz.png' : '/images/dianzan.png' }}"></image>
+          {{building.like_count}}
+        </view>
+  </view>
+  <!-- 评论区 -->
+  <view class="pinglun">
+    <text>全部回复: {{building.reply_num}}</text>
+    <view class="plnone" wx:if="{{building.reply_num==0}}">暂无评论</view>
+    <view class="plcontent" wx:if="{{building.reply_num}}">
+      <view class="plxiangqing" wx:for="{{replayList}}" wx:key="*this">
+        <image class="avatar" src="{{item.info.avatar || '/images/tou.png'}}"></image>
+        <view class="neirong">
+          <text>{{item.info.nickname||item.info.username}}</text>
+          <text>{{item.content}}</text>
+          <view class="huifu">
+            <text>{{item.create_time}}</text>
+            <text>{{item.reply_num}}回复</text>
+          </view>
+        </view>
+        <!-- 点赞 -->
+        <view class="dz" bindtap="pldz" data-item="{{item}}" data-index="{{index}}">
+          <image src="{{item.is_like ? '/images/dz.png' : '/images/dianzan.png'}}"></image>
+          {{item.like_count}}
+        </view>
+      </view>
+      <!-- 加载 -->
+      <view class="jz_or_wu">
+      <text wx:if="{{!loading && !finished}}">加载中...</text>
+      <text class="jz_or_wu" wx:if="{{finished}}">暂无更多</text>
+      </view>
+      
+    </view>
+    <!-- 输入评论 -->
+    <view class="section">
+      <textarea value="{{pl}}" bindblur="bindTextAreaBlur" bindinput="pltb" cursor-spacing="40" fixed="{{true}}" show-confirm-bar="{{false}}" auto-height placeholder="请发表评论~" />
+      <image bindtap="fabiao" src="/images/fasong.png"></image>
+    </view>
+  </view>
+</view>

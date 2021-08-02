@@ -1,0 +1,30 @@
+<!--pages/revise/index.wxml-->
+<view class="common_header">
+    <header>
+    <view  slot="back" class="back">
+        <mp-icon icon="back" color="#fff" catchtap='back' size="{{14}}" bindtap="back"></mp-icon>
+    </view>
+    <view slot="title" class="title">
+      修改密码
+    </view>
+  </header>
+</view>
+<!-- 第一部分 -->
+<view class="mian">
+  <view class="pw">
+    <text>旧密码</text>
+    <input class="weui-input" value="{{oldpw}}" bindinput="oldpw" password="true" type="text" placeholder="请输入密码" maxlength="16" />
+  </view>
+  <view class="pw">
+    <text>新密码</text>
+    <input class="weui-input" value="{{newpw}}" bindinput="newpw" password="true" type="text" placeholder="请输入密码" maxlength="16" />
+  </view>
+  <view class="pw">
+    <text>确认密码</text>
+    <input class="weui-input" value="{{entpw}}" bindinput="entpw" password="true" type="text" placeholder="请输入密码" maxlength="16" />
+  </view>
+  <view class="dl" bindtap="revise">修改</view>
+  <view class="tiaozuan">
+    <text bindtap="retrieve">忘记密码</text>
+  </view>
+</view>

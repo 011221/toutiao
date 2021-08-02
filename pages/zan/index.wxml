@@ -1,0 +1,34 @@
+<!--pages/zan/index.wxml-->
+<view class="common_header">
+    <header>
+    <view  slot="back" class="back">
+        <mp-icon icon="back" color="#fff" catchtap='back' size="{{14}}" bindtap="back"></mp-icon>
+    </view>
+    <view slot="title" class="title">
+      点赞
+    </view>
+  </header>
+  <view class="weui-slidecells">
+  <mp-slideview class="items" buttons="{{slideButtons}}" icon="{{true}}" bindbuttontap="slideButtonTap" data-index="{{index}}" wx:for="{{favorites_list}}" wx:key="index">
+    <view class="weui-slidecell" bindtap="toDetail" data-item="{{item}}">
+      <text>{{item.title}}</text>
+      <view wx:if="{{item.imageSrc.length==1}}" class="imgbox">
+        <image mode="aspectFill" src="{{item.imageSrc[0]}}"></image>
+      </view>
+      <view wx:if="{{item.imageSrc.length>1}}" class="imgbox2">
+        <image mode="aspectFill" wx:for="{{item.imageSrc}}" wx:for-item="img" wx:key="*this" src="{{img}}"></image>
+      </view>
+      <view class="xz">
+        <text>{{item.author}}</text>
+        <text>{{item.time}}</text>
+      </view>
+    </view>
+  </mp-slideview>
+  <view class="jiazai" wx:if="{{!loading}}">
+        加载中...
+      </view>
+      <view class="jiesu" wx:if="{{loading && finished}}">
+        <text>暂无更多</text>
+      </view>
+</view>
+</view>

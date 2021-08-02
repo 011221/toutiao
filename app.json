@@ -1,0 +1,67 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/public/index",
+    "pages/my/index",
+    "components/header/index",
+    "pages/login/index",
+    "pages/reg/index",
+    "pages/revise/index",
+    "pages/phone/index",
+    "pages/about/index",
+    "pages/resetting/index",
+    "pages/collect/index",
+    "pages/zan/index",
+    "pages/edit/edit",
+    "pages/selectlogin/selectLogin",
+    "pages/detail/detail",
+    "pages/reply/reply",
+    "pages/result/result",
+    "pages/search/search",
+    "pages/history/history"
+
+
+
+
+
+
+    
+
+
+
+  ],
+  "entryPagePath": "pages/index/index",
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "嗨头条",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list":[
+     {
+      "pagePath":"pages/index/index",
+      "text": "首页",
+      "iconPath": "images/tabbar/home.png",
+      "selectedIconPath": "images/tabbar/home_active.png"
+     },
+     {
+      "pagePath":"pages/public/index",
+      "text": "发布",
+      "iconPath": "images/tabbar/public.png",
+      "selectedIconPath": "images/tabbar/public_active.png"
+     },
+     {
+      "pagePath":"pages/my/index",
+      "text": "我的",
+      "iconPath": "images/tabbar/my.png",
+      "selectedIconPath": "images/tabbar/my_active.png"
+     }
+    ]
+  },
+  "usingComponents": {
+      "mp-icon": "weui-miniprogram/icon/icon"
+  }
+}

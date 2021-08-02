@@ -1,0 +1,21 @@
+<!--pages/watch_history/watch_history.wxml-->
+<view class="weui-slidecells">
+  <mp-slideview class="items" buttons="{{slideButtons}}" icon="{{true}}" bindbuttontap="slideButtonTap" data-index="{{index}}" wx:for="{{lis}}" wx:key="index">
+    <view class="weui-slidecell" bindtap="toDetail" data-item="{{item}}">
+      <text>{{item.title}}</text>
+      <view wx:if="{{item.imageSrc.length==1}}" class="imgbox">
+        <image mode="aspectFill" src="{{item.imageSrc[0]}}"></image>
+      </view>
+      <view wx:if="{{item.imageSrc.length>1}}" class="imgbox2">
+        <image mode="aspectFill" wx:for="{{item.imageSrc}}" wx:for-item="img" wx:key="*this" src="{{img}}"></image>
+      </view>
+      <view class="xz">
+        <text>{{item.author}}</text>
+        <text>{{item.time}}</text>
+      </view>
+    </view>
+  </mp-slideview>
+      <view class="jiesu" wx:if="{{finished}}">
+        <text>暂无历史</text>
+      </view>
+</view>

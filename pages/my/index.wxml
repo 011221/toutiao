@@ -1,0 +1,66 @@
+<!--pages/my/index.wxml-->
+<view class="me">
+  <header>
+    <view slot="title" class="my">
+      我的
+    </view>
+  </header>
+</view>
+<!-- 第一部分 -->
+<view class="mian">
+  <!-- 未登录 -->
+  <view class="ba">
+    <image src="/images/tabbar/bg01.png"></image>
+  </view>
+  <view class="login" wx:if="{{!userInfo}}">
+    <image bindtap="selectLogin" src="/images/tou.png"></image>
+    <view class="denglu" bindtap="selectLogin">
+      <text>登录</text>
+      <text>|</text>
+      <text>注册</text>
+    </view>
+  </view>
+  <!-- 已登录 -->
+  <view class="login2" wx:if="{{userInfo}}">
+    <view class="tx">
+      <view class="tx_left">
+        <image src="{{userInfo.userInfo.avatar || '/images/tou.png'}}"></image>
+        <text>{{userInfo.userInfo.nickname || userInfo.userInfo.username}}</text>
+      </view>
+      <text class="tx_right" bindtap="edit">编辑资料</text>
+    </view>
+  </view>
+  <!-- 第二部分 -->
+  <view class="my-two">
+    <view class="a2">
+      <view bindtap="collect">
+        <mp-icon icon="star" size="{{30}}" color="crimson"></mp-icon>
+      </view>
+      <text>收藏</text>
+    </view>
+    <view class="a2">
+      <view bindtap="zan">
+        <mp-icon icon="like" size="{{25}}" color="crimson"></mp-icon>
+      </view>
+      <text>点赞</text>
+    </view>
+  </view>
+
+</view>
+<!-- 第三部分 -->
+<view class="my_san">
+  <view bindtap="revise">修改密码 <mp-icon icon="arrow" size="{{2}}" color="#999" style="float: right;margin-right: 30rpx;">
+    </mp-icon>
+  </view>
+  <view bindtap="phone">联系我们 <mp-icon icon="arrow" size="{{2}}" color="#999" style="float: right;margin-right: 30rpx;">
+    </mp-icon>
+  </view>
+  <view bindtap="about">关于我们 <mp-icon icon="arrow" size="{{2}}" color="#999" style="float: right;margin-right: 30rpx;">
+    </mp-icon>
+  </view>
+</view>
+
+<!-- 退出登录 -->
+<view class="tc" wx:if="{{userInfo}}" bindtap="tcDL">
+  <text>退出登录</text>
+</view>

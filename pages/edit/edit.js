@@ -91,7 +91,7 @@ Page({
     } = this.data
     console.log(imageSrc, name, array, index, date)
     wx.request({
-      url: "https://43ba8adf-8ef8-404c-886d-4bd6624c6879.bspapp.com/http/user/editUserInfo",
+      url: "https://1ef2a05f-0d49-4c7a-88e5-d09968b0bed8.bspapp.com/http/user/editUserInfo",
       method: "POST",
       data: {
         avatar: imageSrc,
@@ -102,9 +102,18 @@ Page({
       },
       success: (res) => {
         console.log(res)
-        wx.navigateBack({
-          delta: 1
+        wx.showToast({
+          title: '稍后自动同步',
+          icon: 'success',
+          duration: 2000
         })
+        
+        setTimeout(e => {
+          wx.navigateBack({
+            delta: 1
+          })
+        }, 1000)
+       
       },
       fail: (err) => {
         console.log(err)

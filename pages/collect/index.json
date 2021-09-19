@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "header":"/components/header",
-    "mp-tabs": "@miniprogram-component-plus/tabs"
+    "mp-tabs": "@miniprogram-component-plus/tabs",
+   "mp-loading": "weui-miniprogram/loading/loading"
   },
   "navigationStyle": "custom"
 }

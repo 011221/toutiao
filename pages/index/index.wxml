@@ -4,7 +4,7 @@
   <view>这是插槽</view>
   </header> -->
   <header>
-    <view slot="search" bindtap="suo">
+    <view slot="search" bindtap="toSearch">
       <view class='page_row'>
           <view class="search_arr">
             <!-- <icon class="searchcion" size='16' type='search'></icon> -->
@@ -13,7 +13,7 @@
       </view>
     </view>
   </header>
-  <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" style="top:{{titleHeight}}px">
+  <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" style="top:{{titleHeight}}+10px">
   <block wx:for="{{tabs}}" wx:key="index">
     <view class="nav_item {{currentNav == index?'active':''}}" data-current="{{index}}" bindtap="switchNav" data-index="{{index}}">{{item.name}}</view>
   </block>

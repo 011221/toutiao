@@ -5,13 +5,35 @@ Page({
      * 页面的初始数据
      */
     data: {
-      userInfo: null
+      userInfo: null,
     },
-  
+    navTo(e){
+      let uid=this.data.userInfo
+      console.log(uid)
+     
+     let url=e.currentTarget.dataset.url
+     if(!uid){
+      wx.showToast({
+        title: '您未登录，请先登录',
+        icon:"none",
+        duration:2000
+      })
+      setTimeout(() => {
+          wx.navigateTo({
+        url: '/pages/login/index',
+      })
+      }, 500);
+       
+     }else{
+       wx.navigateTo({
+         url
+       })
+     }
+    },
     //选择登录
     selectLogin() {
       wx.navigateTo({
-        url: "/pages/selectlogin/selectLogin"
+        url: "/pages/login/index"
       })
     },
     //退出登录
@@ -48,19 +70,6 @@ Page({
         url: '/pages/edit/edit',
       })
     },
-    //去收藏
-    collect(){
-      wx.navigateTo({
-        url: '/pages/collect/collect',
-      })
-    },
-    //去历史
-    history(){
-      wx.navigateTo({
-        url: '/pages/history/history',
-      })
-    },
-
     revise(){
         wx.navigateTo({
           url: '/pages/revise/index'
@@ -76,16 +85,6 @@ Page({
           url: '/pages/about/index'
           })
       },
-      collect(){
-        wx.navigateTo({
-          url: '/pages/collect/index',
-        })
-      },
-      edit(){
-        wx.navigateTo({
-          url: '/pages/edit/edit',
-        })
-      },
       zan(){
         wx.navigateTo({
           url: '/pages/zan/index',
@@ -96,7 +95,6 @@ Page({
       this.setData({
         userInfo: getApp().globalData.userInfo
       })
-      console.log(this.data.userInfo)
     },
 
 })

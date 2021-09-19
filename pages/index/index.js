@@ -51,6 +51,7 @@ Page({
           })
           this.getList()
           getApp().globalData.cate = tabs
+          console.log(tabs)
         }
       },
       fail: (err) => {
@@ -123,6 +124,12 @@ Page({
     }
     this.getList()
   },
+   //去搜索
+   toSearch(){
+    wx.navigateTo({
+      url: '/pages/search/search',
+    })
+  },
   // 去详情
   toDetail(e) {
     let item=e.currentTarget.dataset.item
@@ -171,7 +178,7 @@ Page({
     } = this.data
     tabs = JSON.stringify(tabs)
     wx.redirectTo({
-      url: '/pages/release/release?tabs=' + tabs,
+      url: '/pages/public/index?tabs=' + tabs,
     })
   },
   getUserProfile(e) {

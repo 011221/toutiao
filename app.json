@@ -20,15 +20,6 @@
     "pages/search/search",
     "pages/history/history"
 
-
-
-
-
-
-    
-
-
-
   ],
   "entryPagePath": "pages/index/index",
   "window":{
@@ -40,6 +31,7 @@
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
+    "selectedColor":"#036eb8",
     "list":[
      {
       "pagePath":"pages/index/index",

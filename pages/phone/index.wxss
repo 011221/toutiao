@@ -9,6 +9,7 @@
     margin-top: -65rpx;
     margin-left: 40rpx;
   }
+
   .phone_serve{
    margin: 150rpx 35rpx 0;
    padding: 10rpx;

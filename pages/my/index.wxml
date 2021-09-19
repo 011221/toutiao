@@ -25,7 +25,7 @@
     <view class="tx">
       <view class="tx_left">
         <image src="{{userInfo.userInfo.avatar || '/images/tou.png'}}"></image>
-        <text>{{userInfo.userInfo.nickname || userInfo.userInfo.username}}</text>
+        <text>{{userInfo.userInfo.nickname||userInfo.userInfo.username}}</text>
       </view>
       <text class="tx_right" bindtap="edit">编辑资料</text>
     </view>
@@ -33,13 +33,13 @@
   <!-- 第二部分 -->
   <view class="my-two">
     <view class="a2">
-      <view bindtap="collect">
+      <view bindtap="navTo" data-url="/pages/collect/index">
         <mp-icon icon="star" size="{{30}}" color="crimson"></mp-icon>
       </view>
       <text>收藏</text>
     </view>
     <view class="a2">
-      <view bindtap="zan">
+      <view bindtap="navTo"  data-url="/pages/zan/index">
         <mp-icon icon="like" size="{{25}}" color="crimson"></mp-icon>
       </view>
       <text>点赞</text>
@@ -49,9 +49,6 @@
 </view>
 <!-- 第三部分 -->
 <view class="my_san">
-  <view bindtap="revise">修改密码 <mp-icon icon="arrow" size="{{2}}" color="#999" style="float: right;margin-right: 30rpx;">
-    </mp-icon>
-  </view>
   <view bindtap="phone">联系我们 <mp-icon icon="arrow" size="{{2}}" color="#999" style="float: right;margin-right: 30rpx;">
     </mp-icon>
   </view>

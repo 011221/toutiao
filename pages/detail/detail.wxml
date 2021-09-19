@@ -4,7 +4,7 @@
   <view class="zhuozhe">
     <image src="{{detail.avatar||'/images/tou.png'}}"></image>
     <view>
-      <text class="title">{{detail.nickname||detail.username}}</text>
+      <text class="title">{{detail.author||detail.username}}</text>
       <text>{{detail.time}}</text>
     </view>
   </view>
@@ -24,7 +24,7 @@
       <view class="plxiangqing" wx:for="{{plList}}" wx:key="*this">
         <image class="avatar" bindtap="toReply" data-item="{{item}}" src="{{item.info.avatar || '/images/tou.png'}}"></image>
         <view class="neirong" bindtap="toReply" data-item="{{item}}">
-          <text>{{item.info.nickname||item.info.username}}</text>
+          <text>{{item.info.nickname||item.info.author}}</text>
           <text>{{item.content}}</text>
           <view class="huifu">
             <text>{{item.create_time}}</text>

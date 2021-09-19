@@ -21,6 +21,9 @@
    box-sizing: border-box;
    padding:0 24px;
  }
+ .weui-cell_input{
+   color: rgb(65, 64, 64);
+ }
  .fb{
    width: 80%;
    height: 80rpx;

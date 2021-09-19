@@ -12,8 +12,19 @@
 </view>
 <view class="main">
   <view class="wxdl">
-    <text>微信登录</text>
+    <button class='phone-text'   open-type="getUserInfo"  lang="zh_CN" bindgetuserinfo="onGotUserInfo">请登录</button>
   </view>
+  <!--登录弹窗-->
+<view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-content">
+    <view>绑定手机号</view>
+    <view>请先绑定手机号在进行此操作</view>  
+    <button open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">
+      <image class='iconWx'></image>微信用户一键绑定
+    </button>
+  </view>
+</view>
   <view class="dl_or_reg">
     <text bindtap="toLogin">使用手机号登录/注册</text>
   </view>
